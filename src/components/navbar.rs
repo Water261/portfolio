@@ -6,7 +6,7 @@ pub fn navbar() -> Html {
 		<nav class={"navbar is-fixed-top px-4 is-primary"} role={"navigation"} aria-label={"main navigation"}>
 			<div class={"navbar-brand"}>
 				<a href={"#"} class={"navbar-item"}>
-					<img class={"image is-24x24"} src={"https://via.placeholder.com/24.png"} />
+					<span class="material-symbols-outlined">{"home"}</span>
 				</a>
 			</div>
 
