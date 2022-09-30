@@ -1,4 +1,5 @@
 use yew::prelude::*;
+use crate::components::project::Project;
 
 #[function_component(Projects)]
 pub fn projects() -> Html {
@@ -9,11 +10,12 @@ pub fn projects() -> Html {
             </h1>
             <div class={"tile is-ancestor"}>
                 <div class={"tile is-parent is-4"}>
-                    <div class={"tile box is-child"}>
-                        <h1 class={"title"}>
-                            {"One"}
-                        </h1>
-                    </div>
+                    <Project
+                        project_name={"ruhroh"}
+                        project_repo={"https://github.com/Water261/ruhroh"}
+                        project_desc={"A logitech device manager"}
+                        project_languages={vec![String::from("Rust")]}
+                    />
                 </div>
                 <div class={"tile is-parent is-4"}>
                 	<div class={"tile box is-child"}>
