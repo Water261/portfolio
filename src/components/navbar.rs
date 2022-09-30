@@ -6,7 +6,7 @@ pub fn navbar() -> Html {
 		<div class={"container is-fluid"}>
 			<nav class={"navbar"} role={"navigation"} aria-label={"main navigation"}>
 				<div class={"navbar-brand"}>
-					<a class={"navbar-item"}>
+					<a href={"#"} class={"navbar-item"}>
 						<img class={"image is-24x24"} src={"https://via.placeholder.com/24.png"} />
 					</a>
 				</div>
