@@ -18,11 +18,12 @@ pub fn projects() -> Html {
                     />
                 </div>
                 <div class={"tile is-parent is-4"}>
-                	<div class={"tile box is-child"}>
-						<h1 class={"title"}>
-							{"Two"}
-						</h1>
-					</div>
+                	<Project
+                        project_name={"portfolio"}
+                        project_repo={"https://github.com/Water261/portfolio"}
+                        project_desc={"My portfolio website"}
+                        project_languages={vec![String::from("Rust"), String::from("HTML")]}
+                    />
 				</div>
                 <div class={"tile is-parent is-4"}>
                 	<div class={"tile box is-child"}>
