@@ -10,7 +10,7 @@ pub fn about() -> Html {
 						{"About Me"}
 					</h1>
 					<h2 class={"subtitle"}>
-						{"Hi! I'm an aspiring programmer who uses Rust for their projects."}
+						{"Hi there! I'm Matthew, better known through my online alias of Water261. I'm also an aspiring programming working on my skills with Rust and C#."}
 					</h2>
                 </div>
                 <div class={"column is-flex is-justify-content-center is-align-items-center"}>
