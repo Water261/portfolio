@@ -33,7 +33,7 @@ pub fn project(props: &ProjectProps) -> Html {
 			<h1 class={"title"}>
 				{ &props.project_name }
 			</h1>
-			<a target={"_blank"} href={ format!("{}", &props.project_repo) }>
+			<a target={"_blank"} href={ props.project_repo.clone() }>
 				<h3 class={"subtitle pb-3"}>
 					{ &props.project_repo }
 				</h3>
