@@ -1,6 +1,7 @@
 use self::components::about::About;
 use self::components::navbar::Navbar;
 use self::components::projects::Projects;
+use self::components::footer::Footer;
 use yew::prelude::*;
 
 mod components;
@@ -12,6 +13,7 @@ fn app() -> Html {
             <Navbar />
             <About />
             <Projects />
+            <Footer />
         </>
     }
 }
