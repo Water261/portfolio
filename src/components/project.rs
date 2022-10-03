@@ -1,3 +1,5 @@
+use std::ops::Index;
+
 use yew::prelude::*;
 
 #[derive(Properties, PartialEq)]
@@ -12,16 +14,22 @@ pub struct ProjectProps {
 pub fn project(props: &ProjectProps) -> Html {
 	// TODO: Make this more elegant
 	let mut languages = String::new();
+	let lang_len = props.project_languages.len();
 
 	for lang in &props.project_languages {
-		languages.push_str(
-			format!("{}, ", lang).as_str()
-		);
-	}
+		let index = match props.project_languages.binary_search(lang) {
+			Ok(i) => i,
+			Err(_) => 0,
+		};
 
-	let mut chars = languages.chars();
-	chars.next_back();
-	chars.next_back();
+		if index == lang_len - 1 {
+			languages.push_str(lang);
+		} else {
+			languages.push_str(
+				format!("{}, ", lang).as_str()
+			);
+		}
+	}
 
 	html! {
 		<div class={"tile box is-child"}>
@@ -35,7 +43,7 @@ pub fn project(props: &ProjectProps) -> Html {
 			</a>
 			<p class={"py-3"}>{ &props.project_desc }</p>
 			<p class={"py-3"}>
-				{format!("Built in: {}", chars.as_str())}
+				{format!("Built in: {}", languages)}
 			</p>
 		</div>
 	}
