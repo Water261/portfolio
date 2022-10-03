@@ -19,13 +19,12 @@ pub fn project(props: &ProjectProps) -> Html {
 			Ok(i) => i,
 			Err(_) => 0,
 		};
+		
+		languages.push_str(lang);
 
-		if index == lang_len - 1 {
-			languages.push_str(lang);
-		} else {
-			languages.push_str(
-				format!("{}, ", lang).as_str()
-			);
+		if index != lang_len - 1 {
+			// Separate the languages correctly
+			languages.push_str(", ");
 		}
 	}
 
